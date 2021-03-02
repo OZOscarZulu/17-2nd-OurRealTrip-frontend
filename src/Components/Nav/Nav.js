@@ -251,7 +251,7 @@ const NavBarSubCategory = styled.div`
   }
   li {
     display: inline-block;
-    padding: 6px 12px;
+    padding: 6px 12px 6px 0;
     margin-right: 0;
     ${props =>
       props.type === 'after'

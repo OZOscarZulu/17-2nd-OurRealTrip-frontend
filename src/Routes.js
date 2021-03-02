@@ -32,6 +32,8 @@ class Routes extends Component {
         {this.navHandler()}
         <Switch>
           <Route exact path="/" component={Airline} />
+          <Route exact path="/airlinelist" component={AirlineList} />
+          <Route exact path="/staymain" component={StayMain} />
           <Route exact path="/signin" component={SignIn} />
         </Switch>
         <Footer />
