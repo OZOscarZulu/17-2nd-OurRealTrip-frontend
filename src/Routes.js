@@ -11,7 +11,7 @@ import Airline from './Pages/Airline/Airline';
 import AirlineList from './Pages/Airline/AirlineList/AirlineList';
 
 //정민님
-import StayMain from './Pages/Stay/StayMain';
+import StayMain from './Pages/Stay/StayMain/StayMain';
 import StayList from './Pages/Stay/StayList/StayList';
 import StayDetail from './Pages/Stay/StayDetail/StayDetail';
 
@@ -22,11 +22,11 @@ class Routes extends Component {
         <Nav />
         <Switch>
           <Route exact path="/" component={Airline} />
-          <Route exact path="/airlinelist" component={AirlineList} />
+          {/* <Route exact path="/airlinelist" component={AirlineList} />
           <Route exact path="/staymain" component={StayMain} />
           <Route exact path="/staylist" component={StayList} />
           <Route exact path="/staydetail" component={StayDetail} />
-          <Route exact path="/signin" component={SignIn} />
+          <Route exact path="/signin" component={SignIn} /> */}
         </Switch>
         <Footer />
       </Router>

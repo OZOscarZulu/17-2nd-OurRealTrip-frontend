@@ -5,9 +5,7 @@ const Color = {
 };
 
 const theme = {
-  fontSize,
   Color,
-  CenterWrapper,
 };
 
 export default theme;
