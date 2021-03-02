@@ -1,0 +1,52 @@
+{
+  "Discount": [
+    {
+      "id": 1,
+      "DiscountImg": "https://d2ur7st6jjikze.cloudfront.net/cms/1567_original_1614150017.png?1614150017?width=1325"
+    },
+    {
+      "id": 2,
+      "DiscountImg": "https://d2ur7st6jjikze.cloudfront.net/cms/1569_original_1614150018.png?1614150018?width=1325"
+    }
+  ],
+  "Recommend": [
+    {
+      "id": 1,
+      "RecommendImg": "https://d2ur7st6jjikze.cloudfront.net/cms/1577_original_1614330487.png?1614330487?width=1325"
+    },
+    {
+      "id": 2,
+      "RecommendImg": "https://d2ur7st6jjikze.cloudfront.net/cms/1573_original_1614150401.png?1614150401?width=1325"
+    },
+    {
+      "id": 3,
+      "RecommendImg": "https://d2ur7st6jjikze.cloudfront.net/cms/1575_original_1614150403.png?1614150403?width=1325"
+    }
+  ],
+  "SearchCategory": [
+    {
+      "id": 1,
+      "CategoryImg": "https://dffoxz5he03rp.cloudfront.net/icons/ic_accommodation_hotel_40_x_40_colored.svg",
+      "alt": "houseIcon",
+      "name": "호텔·리조트"
+    },
+    {
+      "id": 2,
+      "CategoryImg": "https://dffoxz5he03rp.cloudfront.net/icons/ic_accommodation_pension_40_x_40_colored.svg",
+      "alt": "houseIcon",
+      "name": "펜션·캠핑"
+    },
+    {
+      "id": 3,
+      "CategoryImg": "https://dffoxz5he03rp.cloudfront.net/icons/ic_accommodation_jeju_40_x_40_colored.svg",
+      "alt": "houseIcon",
+      "name": "제주 감성숙소"
+    },
+    {
+      "id": 4,
+      "CategoryImg": "https://dffoxz5he03rp.cloudfront.net/icons/ic_accommodation_month_40_x_40_colored.svg",
+      "alt": "houseIcon",
+      "name": "제주 한달살기"
+    }
+  ]
+}
