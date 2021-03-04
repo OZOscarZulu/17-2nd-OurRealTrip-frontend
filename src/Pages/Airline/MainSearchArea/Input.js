@@ -18,7 +18,7 @@ class Input extends Component {
     inputTarget: '',
     valueInModalInModal: '',
     adultDefault: 1,
-    adult: Number(''),
+    adult: Number('1'),
     child: Number(''),
     baby: Number(''),
   };
@@ -68,13 +68,13 @@ class Input extends Component {
     if (id === '소아+' && child < 9) {
       this.setState({ child: child + 1 });
     }
-    if (id === '소아-' && child > 1) {
+    if (id === '소아-' && child > 0) {
       this.setState({ child: child - 1 });
     }
     if (id === '유아+' && baby < 9) {
       this.setState({ baby: baby + 1 });
     }
-    if (id === '유아-' && baby > 1) {
+    if (id === '유아-' && baby > 0) {
       this.setState({ baby: baby - 1 });
     }
   };
