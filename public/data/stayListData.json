@@ -1,0 +1,274 @@
+{
+  "StayCard": [
+    {
+      "stayCardId": 1,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 진석하우스",
+      "stayCardText": "코딩 하다 창문으로 뛰어 내릴 수 있는 집",
+      "stayCardPoint": "4.0",
+      "stayCardReview": "2,276",
+      "stayCardPrice": "22,000"
+    },
+    {
+      "stayCardId": 2,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 정민하우스",
+      "stayCardText": "버튼 누르면 앉은채로 한식뷔페까지 자동 이동되는 집",
+      "stayCardPoint": "5.0",
+      "stayCardReview": "12,276",
+      "stayCardPrice": "7,000"
+    },
+    {
+      "stayCardId": 3,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 경토하우스",
+      "stayCardText": "코딩 하다 답답하면 제자리 흡연 가능한 부스 설치된 집",
+      "stayCardPoint": "4.5",
+      "stayCardReview": "1,826",
+      "stayCardPrice": "4,500"
+    },
+    {
+      "stayCardId": 4,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 민지하우스",
+      "stayCardText": "몸 뻐근할때 바로 스트레칭 가능한 요가매트 설치된 집",
+      "stayCardPoint": "4.0",
+      "stayCardReview": "2,076",
+      "stayCardPrice": "22,000"
+    },
+    {
+      "stayCardId": 5,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 희영하우스",
+      "stayCardText": "의자 뒤로 젖히면 바로 이불 속으로 들어갈 수 있는 집",
+      "stayCardPoint": "4.0",
+      "stayCardReview": "867",
+      "stayCardPrice": "32,000"
+    },
+    {
+      "stayCardId": 6,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 재이하우스",
+      "stayCardText": "호주 캥거루와 같이 탭댄스 가능한 집",
+      "stayCardPoint": "4.0",
+      "stayCardReview": "7,276",
+      "stayCardPrice": "123,000"
+    },
+    {
+      "stayCardId": 7,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 승연하우스",
+      "stayCardText": "무한으로 즐기는 유닛테스트 집",
+      "stayCardPoint": "5.0",
+      "stayCardReview": "3,276",
+      "stayCardPrice": "10,900"
+    },
+    {
+      "stayCardId": 1,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 진석하우스",
+      "stayCardText": "코딩 하다 창문으로 뛰어 내릴 수 있는 집",
+      "stayCardPoint": "4.0",
+      "stayCardReview": "2,276",
+      "stayCardPrice": "22,000"
+    },
+    {
+      "stayCardId": 2,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 정민하우스",
+      "stayCardText": "버튼 누르면 앉은채로 한식뷔페까지 자동 이동되는 집",
+      "stayCardPoint": "5.0",
+      "stayCardReview": "12,276",
+      "stayCardPrice": "7,000"
+    },
+    {
+      "stayCardId": 3,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 경토하우스",
+      "stayCardText": "코딩 하다 답답하면 제자리 흡연 가능한 부스 설치된 집",
+      "stayCardPoint": "4.5",
+      "stayCardReview": "1,826",
+      "stayCardPrice": "4,500"
+    },
+    {
+      "stayCardId": 4,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 민지하우스",
+      "stayCardText": "몸 뻐근할때 바로 스트레칭 가능한 요가매트 설치된 집",
+      "stayCardPoint": "4.0",
+      "stayCardReview": "2,076",
+      "stayCardPrice": "22,000"
+    },
+    {
+      "stayCardId": 5,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 희영하우스",
+      "stayCardText": "의자 뒤로 젖히면 바로 이불 속으로 들어갈 수 있는 집",
+      "stayCardPoint": "4.0",
+      "stayCardReview": "867",
+      "stayCardPrice": "32,000"
+    },
+    {
+      "stayCardId": 6,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 재이하우스",
+      "stayCardText": "호주 캥거루와 같이 탭댄스 가능한 집",
+      "stayCardPoint": "4.0",
+      "stayCardReview": "7,276",
+      "stayCardPrice": "123,000"
+    },
+    {
+      "stayCardId": 7,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 승연하우스",
+      "stayCardText": "무한으로 즐기는 유닛테스트 집",
+      "stayCardPoint": "5.0",
+      "stayCardReview": "3,276",
+      "stayCardPrice": "10,900"
+    },
+    {
+      "stayCardId": 1,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 진석하우스",
+      "stayCardText": "코딩 하다 창문으로 뛰어 내릴 수 있는 집",
+      "stayCardPoint": "4.0",
+      "stayCardReview": "2,276",
+      "stayCardPrice": "22,000"
+    },
+    {
+      "stayCardId": 2,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 정민하우스",
+      "stayCardText": "버튼 누르면 앉은채로 한식뷔페까지 자동 이동되는 집",
+      "stayCardPoint": "5.0",
+      "stayCardReview": "12,276",
+      "stayCardPrice": "7,000"
+    },
+    {
+      "stayCardId": 3,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 경토하우스",
+      "stayCardText": "코딩 하다 답답하면 제자리 흡연 가능한 부스 설치된 집",
+      "stayCardPoint": "4.5",
+      "stayCardReview": "1,826",
+      "stayCardPrice": "4,500"
+    },
+    {
+      "stayCardId": 4,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 민지하우스",
+      "stayCardText": "몸 뻐근할때 바로 스트레칭 가능한 요가매트 설치된 집",
+      "stayCardPoint": "4.0",
+      "stayCardReview": "2,076",
+      "stayCardPrice": "22,000"
+    },
+    {
+      "stayCardId": 5,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 희영하우스",
+      "stayCardText": "의자 뒤로 젖히면 바로 이불 속으로 들어갈 수 있는 집",
+      "stayCardPoint": "4.0",
+      "stayCardReview": "867",
+      "stayCardPrice": "32,000"
+    },
+    {
+      "stayCardId": 6,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 재이하우스",
+      "stayCardText": "호주 캥거루와 같이 탭댄스 가능한 집",
+      "stayCardPoint": "4.0",
+      "stayCardReview": "7,276",
+      "stayCardPrice": "123,000"
+    },
+    {
+      "stayCardId": 7,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 승연하우스",
+      "stayCardText": "무한으로 즐기는 유닛테스트 집",
+      "stayCardPoint": "5.0",
+      "stayCardReview": "3,276",
+      "stayCardPrice": "10,900"
+    },
+    {
+      "stayCardId": 1,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 진석하우스",
+      "stayCardText": "코딩 하다 창문으로 뛰어 내릴 수 있는 집",
+      "stayCardPoint": "4.0",
+      "stayCardReview": "2,276",
+      "stayCardPrice": "22,000"
+    },
+    {
+      "stayCardId": 2,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 정민하우스",
+      "stayCardText": "버튼 누르면 앉은채로 한식뷔페까지 자동 이동되는 집",
+      "stayCardPoint": "5.0",
+      "stayCardReview": "12,276",
+      "stayCardPrice": "7,000"
+    },
+    {
+      "stayCardId": 3,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 경토하우스",
+      "stayCardText": "코딩 하다 답답하면 제자리 흡연 가능한 부스 설치된 집",
+      "stayCardPoint": "4.5",
+      "stayCardReview": "1,826",
+      "stayCardPrice": "4,500"
+    },
+    {
+      "stayCardId": 4,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 민지하우스",
+      "stayCardText": "몸 뻐근할때 바로 스트레칭 가능한 요가매트 설치된 집",
+      "stayCardPoint": "4.0",
+      "stayCardReview": "2,076",
+      "stayCardPrice": "22,000"
+    },
+    {
+      "stayCardId": 5,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 희영하우스",
+      "stayCardText": "의자 뒤로 젖히면 바로 이불 속으로 들어갈 수 있는 집",
+      "stayCardPoint": "4.0",
+      "stayCardReview": "867",
+      "stayCardPrice": "32,000"
+    },
+    {
+      "stayCardId": 6,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 재이하우스",
+      "stayCardText": "호주 캥거루와 같이 탭댄스 가능한 집",
+      "stayCardPoint": "4.0",
+      "stayCardReview": "7,276",
+      "stayCardPrice": "123,000"
+    },
+    {
+      "stayCardId": 7,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 승연하우스",
+      "stayCardText": "무한으로 즐기는 유닛테스트 집",
+      "stayCardPoint": "5.0",
+      "stayCardReview": "3,276",
+      "stayCardPrice": "10,900"
+    },
+    {
+      "stayCardId": 1,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 진석하우스",
+      "stayCardText": "코딩 하다 창문으로 뛰어 내릴 수 있는 집",
+      "stayCardPoint": "4.0",
+      "stayCardReview": "2,276",
+      "stayCardPrice": "22,000"
+    },
+    {
+      "stayCardId": 2,
+      "stayCardImg": "https://image.fmkorea.com/files/attach/new/20200327/486616/2189697730/2847371312/75218cddd12bbde4d3b9aa640b2b3c20.jpg",
+      "stayCardTitle": "[OurRealTrip존] 정민하우스",
+      "stayCardText": "버튼 누르면 앉은채로 한식뷔페까지 자동 이동되는 집",
+      "stayCardPoint": "5.0",
+      "stayCardReview": "12,276",
+      "stayCardPrice": "7,000"
+    }
+  ]
+}

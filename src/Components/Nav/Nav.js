@@ -1,25 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
-const Nav = ({ type }) => {
+const Nav = () => {
+  const history = useHistory();
+  const location = useLocation();
+
   const handleLogOut = () => {
     localStorage.removeItem('access_token');
-    window.location.href = '/';
+    history.push('/');
   };
 
-  const handlezz = e => {
-    const { value, name } = e.currenTarget;
-    console.log(value);
-    console.log(name);
-  };
+  const type =
+    location.pathname === '/' || location.pathname === '/staymain'
+      ? 'main'
+      : 'after';
   return (
     <NavBar type={type}>
       {type === 'main' && (
         <img
           className="navImg"
           src={
-            window.location.pathname === '/staymain'
+            location.pathname === '/staymain'
               ? './images/staymain1.jpg'
               : './images/airline1.jpg'
           }
@@ -58,9 +60,9 @@ const Nav = ({ type }) => {
               <Link
                 type={type}
                 to="/signin"
-                onClick={() => {
-                  window.location.href = '/signin';
-                }}
+                // onClick={() => {
+                //   window.location.href = '/signin';
+                // }}
               >
                 로그인
               </Link>
@@ -90,9 +92,7 @@ const Nav = ({ type }) => {
               >
                 <li type={type}>숙소</li>
               </Link>
-              <li type={type} name="s" value="d" onClick={handlezz}>
-                렌터카·교통
-              </li>
+              <li type={type}>렌터카·교통</li>
               <li type={type}>투어·티켓</li>
               <li type={type}>랜선투어</li>
               <li type={type}>할인혜택</li>
