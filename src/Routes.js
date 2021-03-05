@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 //경토님
 import Nav from './Components/Nav/Nav';
+import Navafter from './Components/Nav/Navafter';
 import Footer from './Components/Footer/Footer';
 import SignIn from './Pages/SignIn/SignIn';
 
@@ -22,13 +23,13 @@ class Routes extends Component {
         <Nav />
         <Switch>
           <Route exact path="/" component={Airline} />
-          {/* <Route exact path="/airlinelist" component={AirlineList} />
+          {/* <Route exact path="/airlinelist" component={AirlineList} /> */}
           <Route exact path="/staymain" component={StayMain} />
-          <Route exact path="/staylist" component={StayList} />
-          <Route exact path="/staydetail" component={StayDetail} />
-          <Route exact path="/signin" component={SignIn} /> */}
+          {/* <Route exact path="/staylist" component={StayList} />
+          <Route exact path="/staydetail" component={StayDetail} /> */}
+          <Route exact path="/signin" component={SignIn} />
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     );
   }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-class Nav extends Component {
+class Navafter extends Component {
   render() {
     return (
       <NavBar>
@@ -23,21 +23,16 @@ class Nav extends Component {
               <input type="text" placeholder="도시나 상품을 검색해주세요" />
             </SerchBar>
             <ListBar>
-              <a
-                className="itemPatnerBtn"
-                href="https://www.myrealtrip.com/about/becomepartner"
-              >
-                파트너 등록하기
-              </a>
-              <Link
-                to="/"
-                onClick={() => {
-                  window.location.href = '/signin';
-                }}
-              >
-                로그인
-              </Link>
-              <button>회원가입</button>
+              <li>위시리스트</li>
+              <li>예약내역</li>
+              <li>메시지</li>
+              <li>
+                <Profile
+                  className="profileThum"
+                  alt="profile"
+                  src="./images/그럼뭐노.png"
+                />
+              </li>
             </ListBar>
           </NavBarMain>
           <NavBarSubMain>
@@ -74,7 +69,7 @@ class Nav extends Component {
   }
 }
 
-export default Nav;
+export default Navafter;
 
 // 텍스트 색상 : #999999
 //rgb(59, 59, 59) input hover color
@@ -152,35 +147,13 @@ const ListBar = styled.ul`
   width: 560px;
   height: 72px;
 
-  a {
+  li {
     color: white;
     margin-right: 40px;
 
     &:hover {
-      color: #a6a6a4;
-    }
-  }
-
-  Link {
-    color: white;
-
-    &:hover {
-      color: #a6a6a4;
-    }
-  }
-
-  button {
-    height: 40px;
-    width: 120px;
-    border-radius: 3px;
-    border: 1px solid #a6a6a4;
-    background-color: transparent;
-    color: white;
-    outline: none;
-
-    &:hover {
       cursor: pointer;
-      background-color: #a6a6a4;
+      color: #a6a6a4;
     }
   }
 `;
@@ -204,12 +177,17 @@ const NavBarSubCategory = styled.div`
   }
 
   li {
-    padding: 6px 12px;
+    margin-right: 30px;
     color: white;
 
     &:hover {
       cursor: pointer;
-      transform: scaleX(1);
     }
   }
+`;
+
+const Profile = styled.img`
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 `;

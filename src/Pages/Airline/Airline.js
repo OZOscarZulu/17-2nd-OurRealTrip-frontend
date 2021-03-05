@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Airline extends Component {
   render() {
-    return <div></div>;
+    return <div>에어라인</div>;
   }
 }
 
