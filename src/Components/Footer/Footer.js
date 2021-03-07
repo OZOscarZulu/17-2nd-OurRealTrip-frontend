@@ -24,9 +24,9 @@ class Footer extends Component {
             <div className="SiteMapInfo">
               {CompanyInfo.map((itemList, index) => {
                 return (
-                  <ul>
+                  <ul key={index}>
                     {itemList.map((item, index) => {
-                      return <li>{item}</li>;
+                      return <li key={index}>{item}</li>;
                     })}
                   </ul>
                 );
@@ -44,20 +44,20 @@ class Footer extends Component {
             <div className="FooterIcon">
               <ul>
                 <li>
-                  <i class="fab fa-facebook-square"></i>
+                  <i className="fab fa-facebook-square" />
                 </li>
                 <li>
-                  <i class="fab fa-instagram"></i>
+                  <i className="fab fa-instagram" />
                 </li>
                 <li>
-                  <i class="fab fa-youtube"></i>
+                  <i className="fab fa-youtube" />
                 </li>
                 |
                 <li>
-                  <i class="fab fa-apple"></i>
+                  <i className="fab fa-apple" />
                 </li>
                 <li>
-                  <i class="fab fa-google-play"></i>
+                  <i className="fab fa-google-play" />
                 </li>
                 <button>한국어</button>
               </ul>
