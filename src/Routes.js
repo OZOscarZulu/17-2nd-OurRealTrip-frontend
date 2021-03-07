@@ -16,17 +16,22 @@ import StayList from './Pages/Stay/StayList/StayList';
 import StayDetail from './Pages/Stay/StayDetail/StayDetail';
 
 class Routes extends Component {
+  navHandler = () => {
+    if (
+      window.location.pathname === '/' ||
+      window.location.pathname === '/staymain'
+    ) {
+      return <Nav type="main" />;
+    } else {
+      return <Nav type="after" />;
+    }
+  };
   render() {
     return (
       <Router>
-        <Nav />
+        {this.navHandler()}
         <Switch>
           <Route exact path="/" component={Airline} />
-          {/* <Route exact path="/airlinelist" component={AirlineList} />
-          <Route exact path="/staymain" component={StayMain} />
-          <Route exact path="/staylist" component={StayList} />
-          <Route exact path="/staydetail" component={StayDetail} />
-          <Route exact path="/signin" component={SignIn} /> */}
         </Switch>
         <Footer />
       </Router>
