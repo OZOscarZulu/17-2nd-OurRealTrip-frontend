@@ -1,13 +1,17 @@
 import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
 const Nav = ({ type }) => {
-  const history = useHistory();
   const handleLogOut = () => {
     localStorage.removeItem('access_token');
-    // history.push('/');
     window.location.href = '/';
+  };
+
+  const handlezz = e => {
+    const { value, name } = e.currenTarget;
+    console.log(value);
+    console.log(name);
   };
   return (
     <NavBar type={type}>
@@ -86,7 +90,9 @@ const Nav = ({ type }) => {
               >
                 <li type={type}>숙소</li>
               </Link>
-              <li type={type}>렌터카·교통</li>
+              <li type={type} name="s" value="d" onClick={handlezz}>
+                렌터카·교통
+              </li>
               <li type={type}>투어·티켓</li>
               <li type={type}>랜선투어</li>
               <li type={type}>할인혜택</li>
@@ -103,12 +109,9 @@ export default Nav;
 const NavBar = styled.section`
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  ${props =>
-    props.type === 'after' &&
-    css`
-      background-color: white;
-    `}
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.5); */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  ${props => props.type === 'after' && 'background-color: white'}
   z-index: 3;
 
   .navImg {
