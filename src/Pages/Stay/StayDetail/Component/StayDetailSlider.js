@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -6,13 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import SLIDERIMG from './StaySliderData';
 
-const StayDetailSlider = () => {
-  const [staySliderImg, setStaySliderImg] = useState([]);
-
-  useEffect(() => {
-    setStaySliderImg(SLIDERIMG);
-  }, []);
-
+const StayDetailSlider = ({ data }) => {
   const settings = {
     // dots: true,
     infinite: true,
@@ -28,13 +22,14 @@ const StayDetailSlider = () => {
   return (
     <Wrapper>
       <Slider {...settings}>
-        {staySliderImg.map((data, index) => {
-          return (
-            <SliderImgContainer key={index}>
-              <img src={data.img} alt={data.id} />
-            </SliderImgContainer>
-          );
-        })}
+        {data.slide_image &&
+          data.slide_image.map((data, index) => {
+            return (
+              <SliderImgContainer key={index}>
+                <img src={data.image} alt="gg" />
+              </SliderImgContainer>
+            );
+          })}
       </Slider>
     </Wrapper>
   );
@@ -43,14 +38,12 @@ const StayDetailSlider = () => {
 export default StayDetailSlider;
 
 const Wrapper = styled.div`
-  /* border: 1px solid black; */
   outline: none;
 `;
 
 const SliderImgContainer = styled.div`
-  width: 90%;
+  width: 100%;
   height: 280px;
-  /* border: 1px solid black; */
   outline: none;
 
   img {

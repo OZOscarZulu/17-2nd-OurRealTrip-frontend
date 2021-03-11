@@ -25,7 +25,8 @@ class Routes extends Component {
           <Route exact path="/airlinelist" component={AirlineList} />
           <Route exact path="/staymain" component={StayMain} />
           <Route exact path="/staylist" component={StayList} />
-          <Route exact path="/staydetail:id" component={StayDetail} />
+          <Route exact path="/staydetail" component={StayDetail} />
+          <Route exact path="/staydetail/:id" component={StayDetail} />
           <Route exact path="/signin" component={SignIn} />
         </Switch>
         <Footer />

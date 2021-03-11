@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StayDetailSideBar = () => {
+const StayDetailSideBar = ({ data }) => {
   return (
     <StayDetailRight>
       <InfoTop>
@@ -19,10 +19,10 @@ const StayDetailSideBar = () => {
           <span className="title">호스트</span>
           <div className="infoPeople">
             <div className="infoPeopleLeft">
-              <img src="./images/그럼뭐노.PNG" alt="zz" />
+              {data.host && <img src={data.host.image_url} alt="hostFace" />}
               <div className="infoPeopleContact">
-                <span>이름 : 이정민</span>
-                <span>연락처 : 010-2910-4050</span>
+                {data.host && <span>이름 : {data.host.name}</span>}
+                <span>연락처 : 010-1004-1004</span>
               </div>
             </div>
             <div className="infoPeopleRight">
@@ -104,6 +104,7 @@ const InfoProfile = styled.div`
     padding-right: 32px;
     margin-top: 20px;
     border-radius: 5px;
+    cursor: pointer;
   }
 `;
 

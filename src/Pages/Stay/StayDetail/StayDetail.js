@@ -1,38 +1,54 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 
 import StayDetailSlider from './Component/StayDetailSlider';
 import StayDetailSideBar from './Component/StayDetailSideBar';
+import StayDetailRoomCard from './Component/StayDetailRoomCard';
 
-const StayDetail = () => {
+const StayDetail = ({ match }) => {
+  const [stayData, setStayData] = useState([]);
+
+  useEffect(() => {
+    fetch(`http://18.217.180.2:8000/accommodation/${match.params.id}`)
+      .then(res => res.json())
+      .then(res => {
+        console.log('데이터 왔나? >>>>', res.data);
+        setStayData(res.data);
+      });
+  }, []);
+
   return (
     <StayDetailContainer>
-      <StayDetailSlider />
+      <StayDetailSlider data={stayData} />
       <StayDetailContent>
         <StayDetailLeft>
           <LeftDetailTitle>
             <div className="titleName">
-              <h2>토토 게스트하우스</h2>
+              <h2>{stayData.name}</h2>
               <div>
                 <i className="far fa-map" />
                 <span>위치보기</span>
               </div>
             </div>
             <div className="titleInfo">
-              <span className="titleInfoTop">
-                파도를 감상하며 명상하기 좋은 게스트하우스
-              </span>
-              <span className="titleInfoBottom">
-                제주특별자치도 제주시 한림읍 귀덕리 1836-3
-              </span>
+              <span className="titleInfoTop">{stayData.description}</span>
+              <span className="titleInfoBottom">{stayData.address}</span>
               <DetailPointStar>
-                {Array(Math.floor(Number(3.5)) + 1).join('★')}
-                {Array(5 - Math.floor(Number(3.5)) + 1).join('☆')}
+                {stayData.total_rate &&
+                  Array(Math.floor(Number(stayData.total_rate)) + 1).join('★')}
+                {stayData.total_rate &&
+                  Array(5 - Math.floor(Number(stayData.total_rate)) + 1).join(
+                    '☆'
+                  )}
+                {stayData.total_rate && (
+                  <span>{Number(stayData.total_rate)}</span>
+                )}
               </DetailPointStar>
             </div>
           </LeftDetailTitle>
           <LeftDetailBody>
-            <img src="./images/sliderPhoto1.jpg" alt="stayMainPhoto" />
+            <img src={stayData.main_image} alt="stayMainPhoto" />
             <LeftDetailBodyTitle>
               <span>객실 선택</span>
               <TitleFilter>
@@ -57,43 +73,22 @@ const StayDetail = () => {
               </TitleFilter>
             </LeftDetailBodyTitle>
             <LeftDetailBodyList>
-              <DetailCard>
-                <div>
-                  <div>
-                    <img src="" alt="" />
-                  </div>
-                  <div>
-                    <h2>이짝방</h2>
-                    <div>
-                      <p>
-                        기준 4명 최대 6명 더블 침대 2개 최소 예약: 1박 이상 전용
-                        화장실 등등등 ㅋㅋㅋㅋ
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div></div>
-                  <div></div>
-                </div>
-              </DetailCard>
-              <DetailCard></DetailCard>
-              <DetailCard></DetailCard>
+              <StayDetailRoomCard data={stayData} />
             </LeftDetailBodyList>
           </LeftDetailBody>
         </StayDetailLeft>
-        <StayDetailSideBar />
+        <StayDetailSideBar data={stayData} />
       </StayDetailContent>
     </StayDetailContainer>
   );
 };
 
-export default StayDetail;
+export default withRouter(StayDetail);
 
 const StayDetailContainer = styled.div`
   width: 100%;
   height: 100%;
-  background-color: red;
+  /* background-color: red; */
   display: flex;
   flex-direction: column;
 `;
@@ -105,12 +100,13 @@ const StayDetailContent = styled.div`
   background-color: white;
   display: flex;
   margin-top: 60px;
+  margin-bottom: 100px;
 `;
 
 const StayDetailLeft = styled.div`
   position: relative;
   width: 760px;
-  height: 1000vh;
+  /* height: 1000vh; */
   /* background-color: tomato; */
 `;
 
@@ -151,6 +147,7 @@ const LeftDetailTitle = styled.div`
 
       span {
         font-weight: bold;
+        cursor: pointer;
       }
     }
   }
@@ -175,6 +172,13 @@ const LeftDetailTitle = styled.div`
 const DetailPointStar = styled.div`
   margin-top: 10px;
   color: #2b96ed;
+
+  span {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(52, 58, 64);
+  }
 `;
 
 const LeftDetailBody = styled.div`
@@ -262,21 +266,6 @@ const LeftDetailBodyList = styled.div`
   flex-direction: column;
   margin-top: 30px;
   width: 100%;
-  height: 1000vh;
-  background-color: tomato;
-`;
-
-const DetailCard = styled.div`
-  display: flex;
-  width: 100%;
-  height: 180px;
-  background-color: yellow;
-  border: 1px solid rgb(233, 236, 239);
-  box-shadow: rgb(102 109 117 / 32%) 0px 2px 8px;
-  padding: 14px;
-  margin-bottom: 10px;
-
-  &:hover {
-    transform: translateY(-2px);
-  }
+  /* height: 1000vh; */
+  /* background-color: tomato; */
 `;
