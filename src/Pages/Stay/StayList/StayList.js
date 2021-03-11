@@ -6,43 +6,85 @@ import StayPagination from './Components/StayPagination';
 import StayListHeader from './Components/StayListHeader';
 import theme from '../../../Styles/theme';
 
-import {
-  houseThemeArr,
-  roomAmenities,
-  titleFilterArr,
-} from './Components/StayListFilterData';
+import { houseThemeArr, titleFilterArr } from './Components/StayListFilterData';
+
+const checkDataArr = [
+  {
+    id: 1,
+    type: '주차장',
+    isChecked: false,
+  },
+  {
+    id: 2,
+    type: '바베큐시설',
+    isChecked: false,
+  },
+  {
+    id: 3,
+    type: '헤어드라이어기',
+    isChecked: false,
+  },
+  {
+    id: 4,
+    type: 'TV',
+    isChecked: false,
+  },
+  {
+    id: 5,
+    type: 'Wi-Fi',
+    isChecked: false,
+  },
+  {
+    id: 6,
+    type: '수건',
+    isChecked: false,
+  },
+  {
+    id: 7,
+    type: '린스',
+    isChecked: false,
+  },
+  {
+    id: 8,
+    type: '바디워시',
+    isChecked: false,
+  },
+  {
+    id: 9,
+    type: '수영장',
+    isChecked: false,
+  },
+  {
+    id: 10,
+    type: '에어컨',
+    isChecked: false,
+  },
+];
 
 const StayList = () => {
-  // const [checkedItems, setCheckedItems] = useState(new Set());
   const [stayArr, setStayArr] = useState([]);
-  const [checkResult, setCheckResult] = useState('');
-  const [checkArr, setCheckArr] = useState([]);
+  const [checkArr, setCheckArr] = useState(checkDataArr);
   const [titleFilter, setTitleFilter] = useState('favored');
   const [theme, setTheme] = useState(0);
   const [pointRange, setPointRange] = useState(0);
-  const [amenities, setAmenities] = useState('TV');
   const [currentPage, setCurrentPage] = useState(1);
   const [staysPerPage] = useState(7);
 
   const location = useLocation();
-
   useEffect(() => {
     getStayData();
   }, []);
 
-  //첫 시작 fetch
   const getStayData = () => {
     fetch(
-      `http://18.217.180.2:8000/accommodation/category${location.state}&order=${titleFilter}&rate=${pointRange}&roomOption=`
+      `http://18.217.180.2:8000/accommodation${location.state}&order=${titleFilter}&rate=${pointRange}`
     )
       .then(res => res.json())
       .then(res => {
-        console.log('데이터받아오기 >>> ', res.data);
         setStayArr(res.data);
       });
   };
 
-  // 타이틀 sorting fetch
   useEffect(() => {
     fetch(
       `http://18.217.180.2:8000/accommodation/category/${theme}${location.state}&order=${titleFilter}&rate=${pointRange}`
@@ -52,7 +94,7 @@ const StayList = () => {
         setStayArr(res.data);
       });
   }, [titleFilter]);
-  //숙소 테마 click fetch
+
   useEffect(() => {
     fetch(
       `http://18.217.180.2:8000/accommodation/category/${theme}${location.state}&order=${titleFilter}&rate=${pointRange}`
@@ -62,7 +104,7 @@ const StayList = () => {
         setStayArr(res.data);
       });
   }, [theme]);
-  //숙소 평점 range fetch
+
   useEffect(() => {
     fetch(
       `http://18.217.180.2:8000/accommodation/category/${theme}${location.state}&order=${titleFilter}&rate=${pointRange}`
@@ -73,27 +115,40 @@ const StayList = () => {
       });
   }, [pointRange]);
 
-  //숙소 체크 옵션 fetch
-  let checkHelper = [];
-  const handleChecked = (type, e) => {
-    let test = '';
-    checkHelper.push(type);
-    checkHelper.map(item => {
-      setCheckResult(checkResult + '&roomOption=' + item);
-    });
-  };
-  console.log('ㅎㅎ >>> ', checkResult);
-  const handleFilterBtn = () => {
-    fetch(
-      `http://18.217.180.2:8000/accommodation/category/${theme}${location.state}&order=${titleFilter}&rate=${pointRange}${checkResult}`
-    )
-      .then(res => res.json())
-      .then(res => {
-        setStayArr(res.data);
-      });
+  const getFilterCheck = selectId => {
+    let result = '';
+
+    const updatedChecked = checkArr.map(item =>
+      item.id === selectId ? { ...item, isChecked: !item.isChecked } : item
+    );
+    setCheckArr(updatedChecked);
+
+    for (let item of updatedChecked) {
+      if (item.isChecked) {
+        result = result + `&roomOption=${item.type}`;
+      }
+    }
+
+    if (result) {
+      fetch(
+        `http://18.217.180.2:8000/accommodation/category/${theme}${location.state}&order=${titleFilter}&rate=${pointRange}${result}`
+      )
+        .then(res => res.json())
+        .then(res => {
+          setStayArr(res.data);
+        });
+    } else {
+      fetch(
+        `http://18.217.180.2:8000/accommodation/category/${theme}${location.state}&order=${titleFilter}&rate=${pointRange}${result}`
+      )
+        .then(res => res.json())
+        .then(res => {
+          setStayArr(res.data);
+        });
+    }
+    return result;
   };
 
-  //페이지네이션
   const indexOfLastStay = currentPage * staysPerPage;
   const indexOfFirstStay = indexOfLastStay - staysPerPage;
   const currentStays = stayArr.slice(indexOfFirstStay, indexOfLastStay);
@@ -139,18 +194,15 @@ const StayList = () => {
             />
           </div>
           <div>
-            <AmenitiesTitle>
-              무료 서비스
-              <span onClick={e => handleFilterBtn(e)}>검색</span>
-            </AmenitiesTitle>
+            <AmenitiesTitle>무료 서비스</AmenitiesTitle>
             <AmenitiesList>
-              {roomAmenities.map(data => {
+              {checkDataArr.map(data => {
                 return (
                   <div className="checkFilter" key={data.id}>
                     <AmenitiesCheck
                       id={data.id}
                       value={data.type}
-                      onChange={e => handleChecked(data.type, e)}
+                      onChange={() => getFilterCheck(data.id)}
                     />
                     {data.type}
                   </div>
