@@ -1,3 +1,4 @@
+![마이리얼트립로고](https://user-images.githubusercontent.com/65124480/111019024-f37eba80-83ff-11eb-8da1-f597f0c5958b.png)
 
 
 ## 마이리얼트립 기업 소개
@@ -23,6 +24,8 @@
 
 
 ## 팀원 소개
+
+![ourrealtripPhoto](https://user-images.githubusercontent.com/65124480/111019033-fed1e600-83ff-11eb-9ed3-1a77a682027b.jpg)
 
 ### 😎front-end
 
