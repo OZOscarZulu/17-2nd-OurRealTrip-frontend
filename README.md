@@ -29,10 +29,10 @@
 
 박경토
 
-- Navbar / styled components를 활용한 레이아웃 구현
-- Navbar / window.location을 이용한 항공 및 숙박 메인페이지 이동 구현
-- Footer / styled components를 활용한 레이아웃 구현
-- Login / styled componenets를 활용한 레이아웃 구현
+- 컴포넌트를 활용한 기초 레이아웃 구성 및 UI 컴포넌트 재활용
+- Styled-Component를 활용한 컴포넌트 정의
+- 유동 라우팅 기능을 활용한 페이지 이동 기능 구현
+- Nav , Footer , Login페이지 맡아 모든 레이아웃과 관련 기능을 담당하였습니다.
 
 <br>
 
